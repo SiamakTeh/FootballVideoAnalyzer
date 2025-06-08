@@ -223,7 +223,11 @@ class FootballVideoAnalyzer(QMainWindow):
         add_tag_action = QAction("➕ Add New Tag", self)
         add_tag_action.triggered.connect(self.add_new_tag)
         tags_menu.addAction(add_tag_action)
-        
+
+    def new_project(self):
+        """ایجاد یک پروژه‌ی جدید (به‌طور موقت فقط نمایش یک پیام)"""
+        QMessageBox.information(self, "New Project", "این قابلیت هنوز توسعه داده نشده است!")   
+
     def setup_video_playback(self):
         self.cap = None
         self.video_path = ""
