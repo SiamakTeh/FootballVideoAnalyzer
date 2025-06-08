@@ -103,9 +103,9 @@ class FootballVideoAnalyzer(QMainWindow):
         super().__init__()
         self.setWindowTitle("Football Video Analyzer Pro")
         self.setGeometry(100, 100, 1400, 900)
+        self.tag_manager = TagManager()  # مقداردهی اولیه برای مدیریت تگ‌ها
         self.setup_ui()
         self.setup_shortcuts()
-        self.tag_manager = TagManager()  # مقداردهی اولیه برای مدیریت تگ‌ها
         self.update_tags_buttons()  # مقداردهی اولیه دکمه‌های تگ‌ها
         
     def setup_ui(self):
